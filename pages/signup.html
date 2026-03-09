@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Navigation back to Home -->
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="./pages/signup.html"><b>Sign Up</b></a>
+        <a href="../index.html"><b>Home</b></a>
+        <a href="signup.html"><b>Sign UP</b></a>
+        <h1>Sign Up Form</h1>
     </nav>
 
-    <h1>Sign Up Form</h1>
- 
+    <!-- Sign Up Form - Task 6 -->
+    <form action="../results.html" method="GET">
+        <!-- Demographic Info Section -->
+        <fieldset>
+            <legend>Demographic Info</legend>
 
-  </body>
+            <label>
+                Full Name
+                <input type="text" placeholder="Enter your name" name="fullname" />
+            </label>
+            <br /><br />
+
+            <label>
+                Sex
+                <select name="sex">
+                    <option value="1">male</option>
+                    <option value="2">female</option>
+                    <option value="3">other</option>
+                </select>
+            </label>
+            <br /><br />
+
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob" value="2000-01-01" name="dob" />
+            <br />
+        </fieldset>
+        <br />
+
+        <!-- Contact Info Section -->
+        <fieldset>
+            <legend>Contact Info</legend>
+
+            <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" />
+            </label>
+            <br /><br />
+
+            <label>
+                County
+                <input list="counties" name="county" placeholder="Select or type your county" />
+                <datalist id="counties">
+                    <option value="Caroni">
+                    <option value="Mayaro">
+                    <option value="Nariva">
+                    <option value="Saint Andrew">
+                    <option value="Saint David">
+                    <option value="Saint George">
+                    <option value="Saint Patrick">
+                    <option value="Victoria">
+                </datalist>
+            </label>
+            <br /><br />
+
+            <label>
+                Telephone
+                <input type="tel" name="telephone" placeholder="123-456-7890" />
+            </label>
+        </fieldset>
+        <br />
+
+        <!-- Courses Section -->
+        <fieldset>
+            <legend>Courses</legend>
+
+            <label>
+                <input type="checkbox" name="courses" value="info1601" checked/>
+                <span>INFO 1601</span>
+            </label>
+            <br />
+
+            <label>
+                <input type="checkbox" name="courses" value="comp1602"/>
+                <span>COMP 1602</span>
+            </label>
+            <br />
+
+            <label>
+                <input type="checkbox" name="courses" value="comp1603"/>
+                <span>COMP 1603</span>
+            </label>
+            <br />
+
+            <label>
+                <input type="checkbox" name="courses" value="comp1604"/>
+                <span>COMP 1604</span>
+            </label>
+        </fieldset>
+        <br />
+
+        <!-- Submit Button -->
+        <input type="submit" value="Sign Up" />
+    </form>
+
+    <!-- JavaScript Link -->
+    <script src="../script.js"></script>
+</body>
 </html>
